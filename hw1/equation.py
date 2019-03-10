@@ -1,15 +1,20 @@
+"""
+Разработала: Крылова Александра
+Проект: решение квадратичного уравнения
+"""
+
 import math
 
-a = float(input("a = "))
-b = float(input("b = "))
-c = float(input("c = "))
-discr = b ** 2 - 4 * a * c
-if discr > 0:
-    x1 = (-b + math.sqrt(discr)) / (2 * a)
-    x2 = (-b - math.sqrt(discr)) / (2 * a)
-    print('x1 = %.2f, x2 = %.2f' % (x1, x2))
-elif discr == 0:
-    x = -b / (2 * a)
-    print("x = %.2f" % x)
+A = float(input("a = "))
+B = float(input("b = "))
+C = float(input("c = "))
+DISCR = B ** 2 - 4 * A * C
+if DISCR > 0:
+    X1 = (-B + math.sqrt(DISCR)) / (2 * A)
+    X2 = (-B - math.sqrt(DISCR)) / (2 * A)
+    print('x1 = %.2f, x2 = %.2f' % (X1, X2))
+elif DISCR == 0:
+    X = -B / (2 * A)
+    print("x = %.2f" % X)
 else:
     print("Корней нет")
