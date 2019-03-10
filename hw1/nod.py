@@ -1,14 +1,16 @@
+"""
+Разработала: Крылова Александра
+Проект: Нахождение НОД двух чисел
+"""
+
+
 def nod():
     """Нахождение НОД двух чисел"""
-    a = int(input('Введите первое число: '))
-    b = int(input('Введите второе число: '))
-    while a != 0 and b != 0:
-        if a > b:
-            a %= b
-        else:
-            b %= a
-    NOD = a + b
-    print(NOD)
+    a_num = int(input('Введите первое число: '))
+    b_num = int(input('Введите второе число: '))
+    while b_num:
+        a_num, b_num = b_num, a_num % b_num
+    return a_num
 
 
-nod()
+print(nod())
