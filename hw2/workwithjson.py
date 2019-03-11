@@ -1,6 +1,6 @@
 """
 Разработала: Крылова Александра
-Проект: решение квадратичного уравнения
+Проект: работа с .json файлами
 """
 
 
@@ -9,6 +9,7 @@ import re
 import collections
 import zipfile
 import os
+import glob
 
 
 def unzip(filepath, newfilepath):
@@ -32,14 +33,13 @@ def words(filepath):
     return results
 
 
-NAME = ['RC_2006-01', 'RC_2006-02', 'RC_2006-03', 'RC_2006-04', 'RC_2005-12']
-
 os.mkdir('JsonFolder')
-for i in NAME:
-    unzip(i + '.bz2', 'JsonFolder/' + i + '.json')
+FILES = glob.glob('RC*.bz2')
+for name_file in FILES:
+    unzip(name_file, 'JsonFolder/' + name_file[:-4] + '.json')
 WORDS = tuple()
-for i in NAME:
-    WORDS = WORDS + tuple(words('JsonFolder/' + i + '.json'))
+for name_file in FILES:
+    WORDS = WORDS + tuple(words('JsonFolder/' + name_file[:-4] + '.json'))
 TOP20WORDS = collections.Counter(WORDS).most_common(20)
 with open('Top.json', 'w') as f:
     for i in TOP20WORDS:
