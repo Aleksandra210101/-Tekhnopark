@@ -8,20 +8,16 @@ def add(word1, word2, dictionary):
     """Добавление в  dict  пару синонимов (word1, word2)"""
     if word1 not in dictionary:
         dictionary[word1] = []
-        dictionary[word1].append(word2)
-    if word2 not in dictionary[word1]:
-        dictionary[word1].append(word2)
+    dictionary[word1].append(word2)
     if word2 not in dictionary:
         dictionary[word2] = []
-        dictionary[word2].append(word1)
-    if word1 not in dictionary[word2]:
-        dictionary[word2].append(word1)
+    dictionary[word2].append(word1)
 
 
 def count(word1, dictionary):
     """Узнать количество синонимов слова word"""
     if word1 in dictionary:
-        print('Кол-во синонимов слова ' + word1.title() + ' : ' + str(len(dictionary[word1])))
+        print('Кол-во синонимов слова ' + word1.title() + ' : ' + str(len(set(dictionary[word1]))))
     else:
         print(0)
 
