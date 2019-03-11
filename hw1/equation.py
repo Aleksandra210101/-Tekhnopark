@@ -14,7 +14,10 @@ if DISCR > 0:
     X2 = (-B - math.sqrt(DISCR)) / (2 * A)
     print('x1 = %.2f, x2 = %.2f' % (X1, X2))
 elif DISCR == 0:
-    X = -B / (2 * A)
+    if A == 0:
+        X = 0
+    else:
+        X = -B / (2 * A)
     print("x = %.2f" % X)
 else:
     print("Корней нет")
