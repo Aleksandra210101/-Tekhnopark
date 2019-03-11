@@ -15,7 +15,7 @@ def add(word1, word2, dictionary):
         dictionary[word2] = []
         dictionary[word2].append(word1)
     if word1 not in dictionary[word2]:
-        dictionary[word1].append(word2)
+        dictionary[word2].append(word1)
 
 
 def count(word1, dictionary):
