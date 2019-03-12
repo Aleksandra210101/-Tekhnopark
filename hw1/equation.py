@@ -29,3 +29,4 @@ elif DISCR == 0.0:
         print("x = %.2f" % X)
 else:
     print("Корней нет")
+
