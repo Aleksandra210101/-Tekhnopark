@@ -9,7 +9,6 @@ A = float(input("a = "))
 B = float(input("b = "))
 C = float(input("c = "))
 DISCR = B ** 2 - 4 * A * C
-print(DISCR)
 if DISCR > 0.0:
     if A != 0.0:
         X1 = (-B + math.sqrt(DISCR)) / (2 * A)
