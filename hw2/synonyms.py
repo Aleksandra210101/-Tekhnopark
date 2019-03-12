@@ -1,17 +1,17 @@
 """
 Разработала: Крылова Александра
-Проект: решение квадратичного уравнения
+Проект: синонимы
 """
 
 
 def add(word1, word2, dictionary):
     """Добавление в  dict  пару синонимов (word1, word2)"""
     if word1 not in dictionary:
-        dictionary[word1] = []
-    dictionary[word1].append(word2)
+        dictionary[word1] = set()
+    dictionary[word1].add(word2)
     if word2 not in dictionary:
-        dictionary[word2] = []
-    dictionary[word2].append(word1)
+        dictionary[word2] = set()
+    dictionary[word2].add(word1)
 
 
 def count(word1, dictionary):
@@ -46,3 +46,4 @@ for i in range(NUMREQ):
     else:
         print('Вы точно ввели все верно?')
         i -= 1
+
