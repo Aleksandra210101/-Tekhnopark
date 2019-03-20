@@ -39,7 +39,7 @@ def ticker_value_interval(tikerlist, value_line, rang, interval):
 
 def csv_writer(interval_list, listname):
     """Write list to .csv file"""
-    with open(listname + '.csv', 'w') as f_w:
+    with open(listname + '.csv', 'w', newline='') as f_w:
         writer = csv.writer(f_w)
         for i in interval_list:
             writer.writerow(i)
@@ -54,7 +54,7 @@ def interval_do(args_file, interval, tiker_list, listn):
         t_d_d_t = '%Y-%m-%d %H:%M:%S.%f'
         reader = csv.reader(file)
         start = datetime.strptime('2019-01-30 07:00:00.000000', t_d_d_t)
-        stop = datetime.strptime('2019-01-31 15:00:00.00000', t_d_d_t) + timedelta(minutes=interval)
+        stop = datetime.strptime('2019-01-31 03:00:00.00000', t_d_d_t) + timedelta(minutes=interval)
         rang = datetime.strptime('2019-01-30 07:00:00.000000', t_d_d_t)
         for line in reader:
             time = datetime.strptime(line[3], t_d_d_t)
