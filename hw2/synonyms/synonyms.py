@@ -11,6 +11,7 @@ def add( word1, word2, dictionary):
                     dictionary[word2] = set()
                 dictionary[word2].add(word1)
 
+                
 def count(word1, dictionary):
                 """Узнать количество синонимов слова word"""
                 if word1 in dictionary:
@@ -18,6 +19,7 @@ def count(word1, dictionary):
                 else:
                     return 0
 
+            
 def check(word1, word2, dictionary):
                 """Проверяет, являются ли слова word1 и word2 синонимами"""
                 if word1 in dictionary:
@@ -27,6 +29,7 @@ def check(word1, word2, dictionary):
                         return False
                 else:
                     return False
+                  
 
 if __name__ == '__main__':
         SYNONYMS_DICT = {}
