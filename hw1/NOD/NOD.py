@@ -11,4 +11,4 @@ def nod(a_num=0,b_num=1):
     return a_num
 
 
-print(nod())
+print(nod(0,0))
