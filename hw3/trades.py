@@ -60,7 +60,8 @@ def interval_do(args_file, interval, tiker_list, listn):
             time = datetime.strptime(line[3], t_d_d_t)
             if (time.strftime(t_d_d_t) >= start.strftime(t_d_d_t)
                     and (time.strftime(t_d_d_t) <= stop.strftime(t_d_d_t))):
-                if time.strftime(t_d_d_t) < rang.strftime(t_d_d_t):
+                if time.strftime(t_d_d_t) < rang.strftime(t_d_d_t):=
+                
                     if line[0] == 'SBER':
                         ticker_value_interval(sber_tiker, line, rang, interval)
                     if line[0] == 'AAPL':
